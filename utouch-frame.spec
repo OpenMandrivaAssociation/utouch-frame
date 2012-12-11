@@ -46,27 +46,22 @@ This package includes the development files for utouch-evemu.
 %setup -q
  
 %build
+autoreconf -fi
 %configure \
   --disable-static
 %make
  
 %install
 %makeinstall_std
-# Remove unwanted files
-find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
- 
  
 %files
-%defattr(-,root,root)
 %doc ChangeLog README COPYING
 %{_bindir}/utouch-frame-test-mtdev
  
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/*.so.%{major}*
  
 %files -n %{develname}
-%defattr(-,root,root)
 %{_includedir}/utouch/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
