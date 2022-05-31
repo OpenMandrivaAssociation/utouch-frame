@@ -12,7 +12,6 @@ Url:            http://launchpad.net/frame
 Group:          Graphical desktop/Other 
 Source:         https://launchpad.net/frame/trunk/v%{version}/+download/frame-%{version}.tar.xz
 BuildRequires:  pkgconfig(mtdev)
-BuildRequires:  pkgconfig(utouch-evemu)
 BuildRequires:  pkgconfig(evemu)
 BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(xorg-server)
