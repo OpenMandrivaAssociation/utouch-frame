@@ -17,7 +17,7 @@ BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(xorg-server)
 BuildRequires:  x11-server
 
-Requires:	evemu
+Requires:	utouch-evemu
 
 Requires:   %{libname} = %{version}-%{release}
 
