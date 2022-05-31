@@ -63,7 +63,7 @@ autoreconf -fi
 %make_install
  
 %files
-%doc ChangeLog README COPYING
+%doc README COPYING
 %{_bindir}/utouch-frame-test-mtdev
  
 %files -n %{libname}
