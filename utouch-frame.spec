@@ -74,7 +74,7 @@ autoreconf -fi
 %{_libdir}/*.so.%{major}*
  
 %files -n %{develname}
-%{_includedir}/include/oif/frame*
+%{_includedir}/oif/frame*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
  
