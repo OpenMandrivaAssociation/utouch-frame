@@ -20,6 +20,8 @@ BuildRequires:  x11-server
 Requires:	evemu
 
 Requires:   %{libname} = %{version}-%{release}
+
+Provides: frame
  
 %description
 This package provides the tree that handles the buildup and 
@@ -40,6 +42,7 @@ Summary:        Touch frame library development files
 Group:          Development/C
 Requires:       %{libname} = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
+Provides:       frame-devel = %{version}-%{release}
  
 %description -n %{develname}
 This package provides the tree that handles the buildup and 
@@ -52,6 +55,7 @@ This package includes the development files for utouch-evemu.
 %autosetup -n %{oname}-%{version}
  
 %build
+# Not compile with clang 14 due error: moving a temporary object prevents copy elision [-Werror,-Wpessimizing-move]
 export CC=gcc
 export CXX=g++
 autoreconf -fi
@@ -64,13 +68,13 @@ autoreconf -fi
  
 %files
 %doc README COPYING
-#{_bindir}/utouch-frame-test-mtdev
+%{_bindir}/frame-test-x11
  
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
  
 %files -n %{develname}
-#{_includedir}/utouch/
+%{_includedir}/include/oif/frame*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
  
