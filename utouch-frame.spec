@@ -64,7 +64,7 @@ autoreconf -fi
  
 %files
 %doc README COPYING
-%{_bindir}/utouch-frame-test-mtdev
+#{_bindir}/utouch-frame-test-mtdev
  
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
