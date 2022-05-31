@@ -1,4 +1,4 @@
-%define major 1
+%define major 6
 %define libname %mklibname  %{name} %{major}
 %define develname   %mklibname  %{name} -d
 %define oname frame
