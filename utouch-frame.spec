@@ -1,17 +1,23 @@
 %define major 1
 %define libname %mklibname  %{name} %{major}
 %define develname   %mklibname  %{name} -d
+%define oname frame
 
 Name:           utouch-frame
-Version:        1.1.4
+Version:        2.5.0
 Release:        1
 License:        GPL-3.0
 Summary:        Touch frame library
-Url:            http://launchpad.net/utouch-frame
+Url:            http://launchpad.net/frame
 Group:          Graphical desktop/Other 
-Source:         %{name}-%{version}.tar.gz
+Source:         https://launchpad.net/frame/trunk/v%{version}/+download/frame-%{version}.tar.xz
 BuildRequires:  pkgconfig(mtdev)
 BuildRequires:  pkgconfig(utouch-evemu)
+BuildRequires:  pkgconfig(evemu)
+BuildRequires:  pkgconfig(xi)
+BuildRequires:  pkgconfig(xorg-server)
+
+Requires:	evemu
 
 Requires:   %{libname} = %{version}-%{release}
  
@@ -43,16 +49,16 @@ of a set of simultaneous touches.
 This package includes the development files for utouch-evemu.
  
 %prep
-%setup -q
+%autosetup -n %{oname}-%{version}
  
 %build
 autoreconf -fi
 %configure \
   --disable-static
-%make
+%make_build
  
 %install
-%makeinstall_std
+%make_install
  
 %files
 %doc ChangeLog README COPYING
