@@ -15,6 +15,7 @@ BuildRequires:  pkgconfig(mtdev)
 BuildRequires:  pkgconfig(evemu)
 BuildRequires:  pkgconfig(xi)
 BuildRequires:  pkgconfig(xorg-server)
+BuildRequires:  x11-server
 
 Requires:	evemu
 
