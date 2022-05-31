@@ -70,7 +70,7 @@ autoreconf -fi
 %{_libdir}/*.so.%{major}*
  
 %files -n %{develname}
-%{_includedir}/utouch/
+#{_includedir}/utouch/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
  
