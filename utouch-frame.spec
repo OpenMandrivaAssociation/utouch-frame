@@ -52,6 +52,8 @@ This package includes the development files for utouch-evemu.
 %autosetup -n %{oname}-%{version}
  
 %build
+export CC=gcc
+export CXX=g++
 autoreconf -fi
 %configure \
   --disable-static
