@@ -8,7 +8,7 @@ Version:        2.5.0
 Release:        1
 License:        GPL-3.0
 Summary:        Touch frame library
-Url:            http://launchpad.net/frame
+Url:            https://launchpad.net/frame
 Group:          Graphical desktop/Other 
 Source:         https://launchpad.net/frame/trunk/v%{version}/+download/frame-%{version}.tar.xz
 BuildRequires:  pkgconfig(mtdev)
