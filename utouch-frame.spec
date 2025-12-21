@@ -11,6 +11,11 @@ Summary:        Touch frame library
 Url:            https://launchpad.net/frame
 Group:          Graphical desktop/Other 
 Source:         https://launchpad.net/frame/trunk/v%{version}/+download/frame-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(mtdev)
 BuildRequires:  pkgconfig(evemu)
 BuildRequires:  pkgconfig(xi)
